@@ -1,42 +1,171 @@
-<!Doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+    
+    
+    
+    
+    
 
-   <title>Spargel</title>
-  
+    
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="referrer" content="no-referrer"/>
+    <script src="/js/jquery.1.4.4.min.js"></script>
+    <script src="/js/modernizr.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function isChrome() {
+                return Boolean(window.chrome);
+            }
+
+            function isEdge() {
+                // Internet Explorer 6-11
+                var isIE = /*@cc_on!@*/false || !!document.documentMode;
+                // Edge 20+
+                return Boolean(!isIE && !!window.StyleMedia);
+            }
+
+            function isFirefox59orLater() {
+                if (CSS.supports) {
+                    return CSS.supports("overscroll-behavior-y", "none") && CSS.supports("text-justify", "none");
+                }
+
+                return false;
+            }
+
+            function paintTimingApiAvailable() {
+                var apiAvailable = false;
+                try {
+                    var observer = new PerformanceObserver(function (list) {
+
+                    });
+                    // register observer for long task notifications
+                    observer.observe({entryTypes: ["paint"]});
+                    apiAvailable = true;
+                } catch (e) {
+                    //if an exception will be thrown, this means, that the api is not available,
+                    //so we will ignore it and return false
+                }
+                return apiAvailable;
+                // does not work : performance.getEntriesByType('paint').length>0
+            }
+
+            var uri = "http://privatelink.de/forward/?https%3A%2F%2Fwww.spieluhr.de";
+
+            // datauri not usable beginning with chrome v60, edge and Firefox >= 59
+            if ((isChrome() && paintTimingApiAvailable()) || isEdge() || isFirefox59orLater()) {
+                self.location = uri;
+            } else setTimeout(function () {
+                if ((Modernizr.datauri) && (navigator.userAgent.indexOf('Trident') == -1) && (navigator.userAgent.indexOf('MSIE 8.') == -1) && (navigator.userAgent.indexOf('iOS') == -1)) {
+                    var datauri = "data:text/html;charset=utf-8;base64,PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0nUmVmcmVzaCcgY29udGVudD0nMDsgVVJMPWh0dHA6Ly9wcml2YXRlbGluay5kZS9mb3J3YXJkLz9odHRwcyUzQSUyRiUyRnd3dy5zcGllbHVoci5kZScgLz48L2hlYWQ+PGJvZHk+PC9ib2R5PjwvaHRtbD4=";
+                    //alert("forward to: "+datauri);
+                    self.location = datauri;
+                } else {
+                    //alert("no datauri");
+                    self.location = uri;
+                }
+            }, 1000);
+        });
+    </script>
+
+    
+
+
+    
+        
+            <title>Weiterleitung</title>
+        
+
+        
+    
+
+    <style type="text/css">
+        html {
+            background: #CCCCCC;
+        }
+
+        body {
+
+            color: black;
+            font: 14px "Lucida Grande", "Lucida Sans Unicode", tahoma, verdana, arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        a {
+            color: blue;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        #container {
+            background: white;
+            border: 1px solid #666;
+            background: white;
+            line-height: 2.4;
+            padding: 1em;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 0px;
+        }
+
+        p#url {
+            font-weight: bold;
+            overflow: hidden;
+
+        }
+
+        #poweredby {
+            clear: both;
+            color: black;
+            font-size: 12px;
+        }
+
+        #poweredby a {
+            color: black;
+        }
+
+    </style>
 </head>
+<body>
 
-   <h1 align="center">Spargel Definition</h1>
-   
+<div id="container">
+    <h1>Weiterleitung zu https://www.spieluhr.de</h1>
+
+    <p><!-- Please wait while you're being redirected to ...<br />
+                Espera mientras te redireccionamos a ...</p>-->
+        Ihr Browser wird automatisch weitergeleitet.<br/>Sie können auch den nachfolgenden Link eigenständig anklicken.
+
+    </p><br/>
+    <p id="url"><a href="https://www.spieluhr.de">https://www.spieluhr.de
+    </a></p>
+
+
+    </p>
+</div>
+<div id="poweredby">
+    Weiterleitungsservice von: <a href="/">privatelink.de
+        </a>
+</div>
+
 <script type="text/javascript">
 <!--
 
 
-window.location = "https://www.ebesucher.de/c/games-clans?surfForUser=nohack.u01";
-window.location = "http://www.ebesucher.de/surfbar/nohack.u01?c=games-clans";
-window.location = "https://www.ebesucher.de/surfbar/nohack.u01?link=surfbar&c=games-clans";
-window.location = "https://www.ebesucher.de/surfbar/nohack?link=nohack&c=flirten-liebe#c=flirten-liebe";
+window.location = "https://www.ebesucher.de/c/games-clans?surfForUser=ckfj7735";
+window.location = "http://www.ebesucher.de/surfbar/ckfj7735?c=games-clans";
+window.location = "https://www.ebesucher.de/surfbar/ckfj7735?link=surfbar&c=games-clans";
+window.location = "https://www.ebesucher.de/surfbar/ckfj7735?link=ckfj7735&c=flirten-liebe#c=flirten-liebe";
 
 
 
 
-</script>
-
-<script type="text/javascript">
-<!--
-
-
-window.location = "https://www.ebesucher.de/c/games-clans?surfForUser=nohack.u01";
-window.location = "http://www.ebesucher.de/surfbar/nohack.u01?c=games-clans";
-window.location = "https://www.ebesucher.de/surfbar/nohack.u01?link=surfbar&c=games-clans";
-window.location = "https://www.ebesucher.de/surfbar/nohack?link=nohack&c=flirten-liebe#c=flirten-liebe";
-
-
-
-
-</script>
-
-   
+</script
 </body>
 </html>
 
