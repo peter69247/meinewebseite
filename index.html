@@ -1,171 +1,132 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    
-    
-    
-    
-    
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Double Advertise</title>
+  <meta name="description" content="Double Advertise Free link traffic exchange company, start now without settings and registration"/>
+  <meta name="keywords" content="double advertise, autosurf, websurf, traffic exchnage, link exchnage, seo, increase alexa rank">
+  <link rel="stylesheet" type="text/css" href="boards.css" />
+  <link rel="shortcut icon" href="https://www.doubleadvertise.com/favicon.ico" />
+  
+  <script type="text/javascript" > 
+  function replaceText(el, text) {
+  if (el != null) {
+    clearText(el);
+    var newNode = document.createTextNode(text);
+    el.appendChild(newNode);
+  }
+}
 
-    
+function clearText(el) {
+  if (el != null) {
+    if (el.childNodes) {
+      for (var i = 0; i < el.childNodes.length; i++) {
+        var childNode = el.childNodes[i];
+        el.removeChild(childNode);
+      }
+    }
+  }
+}
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="referrer" content="no-referrer"/>
-    <script src="/js/jquery.1.4.4.min.js"></script>
-    <script src="/js/modernizr.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            function isChrome() {
-                return Boolean(window.chrome);
-            }
-
-            function isEdge() {
-                // Internet Explorer 6-11
-                var isIE = /*@cc_on!@*/false || !!document.documentMode;
-                // Edge 20+
-                return Boolean(!isIE && !!window.StyleMedia);
-            }
-
-            function isFirefox59orLater() {
-                if (CSS.supports) {
-                    return CSS.supports("overscroll-behavior-y", "none") && CSS.supports("text-justify", "none");
-                }
-
-                return false;
-            }
-
-            function paintTimingApiAvailable() {
-                var apiAvailable = false;
-                try {
-                    var observer = new PerformanceObserver(function (list) {
-
-                    });
-                    // register observer for long task notifications
-                    observer.observe({entryTypes: ["paint"]});
-                    apiAvailable = true;
-                } catch (e) {
-                    //if an exception will be thrown, this means, that the api is not available,
-                    //so we will ignore it and return false
-                }
-                return apiAvailable;
-                // does not work : performance.getEntriesByType('paint').length>0
-            }
-
-            var uri = "http://privatelink.de/forward/?https%3A%2F%2Fwww.spieluhr.de";
-
-            // datauri not usable beginning with chrome v60, edge and Firefox >= 59
-            if ((isChrome() && paintTimingApiAvailable()) || isEdge() || isFirefox59orLater()) {
-                self.location = uri;
-            } else setTimeout(function () {
-                if ((Modernizr.datauri) && (navigator.userAgent.indexOf('Trident') == -1) && (navigator.userAgent.indexOf('MSIE 8.') == -1) && (navigator.userAgent.indexOf('iOS') == -1)) {
-                    var datauri = "data:text/html;charset=utf-8;base64,PGh0bWw+PGhlYWQ+PG1ldGEgaHR0cC1lcXVpdj0nUmVmcmVzaCcgY29udGVudD0nMDsgVVJMPWh0dHA6Ly9wcml2YXRlbGluay5kZS9mb3J3YXJkLz9odHRwcyUzQSUyRiUyRnd3dy5zcGllbHVoci5kZScgLz48L2hlYWQ+PGJvZHk+PC9ib2R5PjwvaHRtbD4=";
-                    //alert("forward to: "+datauri);
-                    self.location = datauri;
-                } else {
-                    //alert("no datauri");
-                    self.location = uri;
-                }
-            }, 1000);
-        });
-    </script>
-
-    
-
-
-    
-        
-            <title>Weiterleitung</title>
-        
-
-        
-    
-
-    <style type="text/css">
-        html {
-            background: #CCCCCC;
+function getText(el) {
+  var text = "";
+  if (el != null) {
+    if (el.childNodes) {
+      for (var i = 0; i < el.childNodes.length; i++) {
+        var childNode = el.childNodes[i];
+        if (childNode.nodeValue != null) {
+          text = text + childNode.nodeValue;
         }
+      }
+    }
+  }
+  return text;
+}
 
-        body {
+function ChangeParentDocumentO(url) {
+window.opener.location.replace(url);
+}
 
-            color: black;
-            font: 14px "Lucida Grande", "Lucida Sans Unicode", tahoma, verdana, arial, sans-serif;
-            margin: 20px;
-            text-align: center;
-        }
+function openRequested0() {
+var ww = document.getElementById("aaa").value;
+var vr = document.getElementById("timee").value;
+var it = document.getElementById("idd").value;
+var vay =  "traf.php?w=" + ww + "&v=" + vr + "&i=" + it;
+var ce = window.opener;
+ce.location.replace(vay);
+}
 
-        a {
-            color: blue;
-        }
+function openRequested() {
+function vanyo() { if(!ce || ce.closed) { clearInterval(timer); document.location.assign('/'); } };
+var timer = setInterval(vanyo, 500);
+var vr = document.getElementById("timee").value;
+var it = document.getElementById("idd").value;
+var vay =  "traf.php?v=" + vr + "&i=" + it;
+var ce = window.opener;
+ce.location.replace(vay);
+}
 
-        h1 {
-            color: black;
-        }
 
-        #container {
-            background: white;
-            border: 1px solid #666;
-            background: white;
-            line-height: 2.4;
-            padding: 1em;
-            width: 80%;
-            margin: auto;
-            margin-bottom: 0px;
-        }
+var request = null;
 
-        p#url {
-            font-weight: bold;
-            overflow: hidden;
+   function createRequest() {
+     try {
+       request = new XMLHttpRequest();
+     } catch (trymicrosoft) {
+       try {
+         request = new ActiveXObject("Msxml2.XMLHTTP");
+       } catch (othermicrosoft) {
+         try {
+           request = new ActiveXObject("Microsoft.XMLHTTP");
+         } catch (failed) {
+           request = null;
+         }
+       }
+     }
 
-        }
+     if (request == null)
+       alert("Error creating request object!");
+   }
 
-        #poweredby {
-            clear: both;
-            color: black;
-            font-size: 12px;
-        }
+   function getBoardsSold() {
+	 var af = document.referrer;
+	 var tm = document.getElementById("timee").value;
+	 var iid = document.getElementById("idd").value;
+     createRequest();
+     var url = "get_majax.php";
+     request.open("POST", url, true);
+     request.onreadystatechange = updatePage;
+     request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+  request.send("tm=" + tm + "&iid=" + iid);
+  }
+  
+  function updatePage() {
+    if (request.readyState == 4) {
+      var newTotal = request.responseText;
+	  document.getElementById("cel").innerHTML = newTotal;	  
+	  document.getElementById("timee").value = document.getElementById("vree").value;
+	  document.getElementById("idd").value = document.getElementById("idee").value;
+    }
+  }
 
-        #poweredby a {
-            color: black;
-        }
+  </script>
 
-    </style>
 </head>
+
 <body>
+<center>
+<IMG SRC='blop.gif'>
 
-<div id="container">
-    <h1>Weiterleitung zu https://www.spieluhr.de</h1>
-
-    <p><!-- Please wait while you're being redirected to ...<br />
-                Espera mientras te redireccionamos a ...</p>-->
-        Ihr Browser wird automatisch weitergeleitet.<br/>Sie können auch den nachfolgenden Link eigenständig anklicken.
-
-    </p><br/>
-    <p id="url"><a href="https://www.spieluhr.de">https://www.spieluhr.de
-    </a></p>
-
-
-    </p>
-</div>
-<div id="poweredby">
-    Weiterleitungsservice von: <a href="/">privatelink.de
-        </a>
+<br /> 
+<b>Your Site:</b> http://www.doubleadvertise.com/traf.php?v=1621950488&i=1062038027 <br>
+<input id='aaa' name='aaa' type='hidden' value='http://www.doubleadvertise.com/traf.php?v=1621950488&i=1062038027'>
+<input id='timee' name='timee' type='hidden' value='1621950753'>
+<input id='idd' name='idd' type='hidden' value='498667527'>
+<div width='200' height='620' id='cel'>
+<IMG SRC='p.jpg' onload='setTimeout(openRequested0, 10); setInterval(getBoardsSold, 9000); setInterval(openRequested, 9000);'>
 </div>
 
-<script type="text/javascript">
-<!--
-
-
-window.location = "https://www.ebesucher.de/c/games-clans?surfForUser=ckfj7735";
-window.location = "http://www.ebesucher.de/surfbar/ckfj7735?c=games-clans";
-window.location = "https://www.ebesucher.de/surfbar/ckfj7735?link=surfbar&c=games-clans";
-window.location = "https://www.ebesucher.de/surfbar/ckfj7735?link=ckfj7735&c=flirten-liebe#c=flirten-liebe";
-
-
-
-
-</script
+</center>
 </body>
 </html>
 
